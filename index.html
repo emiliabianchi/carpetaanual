@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="img/logo.jpg" />
+    <title>Carpeta anual 2</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html" class="touchable">INICIO</a>
+                </li>
+                <li>
+                    <a href="#trabajos" class="touchable">TRABAJOS</a>
+                </li>
+                <li>
+                    <a href="#yo" class="touchable">SOBRE MÍ</a>
+                </li>
+                <li>
+                    <a href="#contacto" class="touchable">CONTACTO</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <h1>EMILIA</h1>
+    <section id="trabajos">
+        <ul>
+            <li class="touchable">EDITORIAL</li>
+            <li class="touchable">WEB</li>
+            <li class="touchable">BRANDING</li>
+            <li class="touchable">DISEÑO</li>
+        </ul>
+    </section>
+    <div id="grid">
+        <article id="grid0"><a href="#grid0">
+                <h3 class="touchable">Punto Clave</h3>
+            </a></article>
+        <article id="grid1"><a href="#grid1">
+                <h3 class="touchable">El universo como reto</h3>
+            </a></article>
+        <article id="grid2" class="videos"><a href="#grid2">
+                <h3 class="touchable">Crumbl Landing</h3>
+            </a></article>
+        <article id="grid3" class="videos"><a href="#grid3">
+                <h3 class="touchable">Mangotown</h3>
+            </a></article>
+        <article id="grid4" class="videos"><a href="#grid4">
+                <h3 class="touchable">Crumbl App</h3>
+            </a></article>
+        <article id="grid5"><a href="#grid5">
+                <h3 class="touchable">Zigzag</h3>
+            </a></article>
+        <article id="grid6"><a href="#grid6">
+                <h3 class="touchable">Monografía</h3>
+            </a></article>
+        <article id="grid7"><a href="#grid7">
+                <h3 class="touchable">Vino Clarendon</h3>
+            </a></article>
+    </div>
+    <section id="yo">
+        <h2>Sobre mí</h2>
+        <p>Mi nombre es Emilia Bianchi, soy una diseñadora con ojo para el detalle. Este portfolio reúne proyectos que
+            reflejan el valor y la esencia que aporto como diseñadora, cada pieza dentro de la variedad es una parte de
+            quién soy.</p>
+        <img src="img/yop.png" alt="imagen de mi persona animada">
+    </section>
+    <footer id="contacto">
+        <a href=""><img src="img/logotipo-de-instagram.png" alt="Instagram" class="touchable"></a>
+        <a href=""><img src="img/logotipo-de-linkedin.png" alt="Linkedin" class="touchable"></a>
+        <a href=""><img src="img/behance.png" alt="Behance" class="touchable"></a>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if ('ontouchstart' in window || navigator.maxTouchPoints) {
+                document.querySelectorAll(".touchable").forEach(el => {
+                    el.addEventListener("click", function (event) {
+                        if (this.matches("nav ul li a")) {
+                            if (!this.classList.contains("touch-active")) {
+                                event.preventDefault();
+                            }
+                        }
+                        else if (this.matches("#trabajos ul li")) {
+                            event.stopPropagation();
+                        }
+                        this.classList.toggle("touch-active");
+                    });
+                });
+            }
+        });
+        // Para que no scrollee cuando refreshee la pagina
+        window.history.scrollRestoration = "manual";
+        window.onload = function () {
+            window.scrollTo(0, 0);
+        };
+    </script>
+</body>
+
+</html>
