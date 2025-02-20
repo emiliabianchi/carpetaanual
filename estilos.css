@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'Syne Extra';
+    src: url('fonts/LuckiestGuy-Regular.ttf') format('truetype');
+}
 * {
     margin: 0;
     padding: 0;
